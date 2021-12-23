@@ -1,0 +1,12 @@
+API:
+  url: https://robot-dreams-de-api.herokuapp.com
+  endpoint: /out_of_stock
+  payload: {"date": "2021-12-12"}
+  auth: JWT <jwt_token>
+  output-type: JSON
+  content-type: application/json
+
+AUTH:
+  endpoint: /auth
+  payload: {"username": "rd_dreams", "password": "djT6LasE"}
+  output-type: JWT TOKEN
