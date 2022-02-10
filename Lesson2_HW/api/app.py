@@ -27,7 +27,7 @@ def app(api_date=None):
             except OSError as exc:
                 pass
 
-        with open(f'{api_date}/{api_date}+txt', "w") as f:
+        with open(f'{api_date}/{api_date}.txt', "w") as f:
             f.write(content)
 
     except HTTPError:
@@ -36,7 +36,7 @@ def app(api_date=None):
 
 if __name__ == '__main__':
     base = datetime.datetime.today()
-    dates = [(base - datetime.timedelta(days=x)).strftime('%Y-%m-%d') for x in range(30)]
+    dates = [(base - datetime.timedelta(days=x)).strftime('%Y-%m-%d') for x in range(3)]
     for date in dates:
         app(date)
 
